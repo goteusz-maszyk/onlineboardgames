@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon ."
+    "start-dev": "nodemon .",
+    "start": "node ."
   },
   "engines": {
     "node": "16.13.2"
