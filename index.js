@@ -17,7 +17,6 @@ io.on('connection', (socket) => {
 
   socket.on('cellChange', data => {
     onCellChange(socket, rooms, io, data)
-    console.log(rooms[socket.room])
   })
 
   setTimeout(() => {
