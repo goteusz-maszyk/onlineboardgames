@@ -3,21 +3,41 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  font-size: xx-large;
+  --margin: 5px;
+  --td-vw: calc(100vw / 3 - (3 * var(--margin)));
+  --td-vh: calc(100vh / 3 - (3 * var(--margin)))
 }
 
 a {
   color: #61dafb;
 }
 
-td {
-  width: 100px;
-  height: 100px;
-}
-
 table {
   margin: 5px auto;
 }
+
+@media screen and (orientation:portrait) {
+  td {
+    width: var(--td-vw);
+    height: var(--td-vw);
+  }
+
+  body {
+    font-size: 20vw;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  td {
+    width: var(--td-vh);
+    height: var(--td-vh);
+  }
+
+  body {
+    font-size: 20vh;
+  }
+}
+
 .vert {
   border-left: 2px solid black;
   border-right: 2px solid black;
