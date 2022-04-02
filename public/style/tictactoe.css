@@ -1,28 +1,34 @@
 body {
   text-align: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   --margin: 5px;
-  --td-vw: calc(100vw / 3 - (3 * var(--margin)));
-  --td-vh: calc(100vh / 3 - (3 * var(--margin)))
+  --td-vw: calc(33vw - (3 * var(--margin)));
+  --td-vh: calc(20vh - (3 * var(--margin)))
 }
 
 a {
   color: #61dafb;
 }
 
+p {
+  font-size: large;
+}
+
 table {
   margin: 5px auto;
+}
+
+.won-cell {
+  color: #df5d00;
 }
 
 @media screen and (orientation:portrait) {
   td {
     width: var(--td-vw);
     height: var(--td-vw);
-  }
-
-  body {
     font-size: 20vw;
   }
 }
@@ -31,10 +37,7 @@ table {
   td {
     width: var(--td-vh);
     height: var(--td-vh);
-  }
-
-  body {
-    font-size: 20vh;
+    font-size: 15vh;
   }
 }
 
@@ -42,6 +45,7 @@ table {
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
+
 .hori {
   border-top: 2px solid black;
   border-bottom: 2px solid black;

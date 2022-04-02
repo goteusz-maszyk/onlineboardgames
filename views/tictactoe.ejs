@@ -29,6 +29,18 @@
       </tr>
     </tbody>
   </table>
+  <p>GAME STATUS: <span id="game-status">PENDING</span></p>
+  <p><button id="reset-game-btn">RESET GAME</button></p>
+  <p id="room">
+    ROOM:
+    <%= room %>
+  </p>
+
+  <form action="./">
+    <input placeholder="Change room" name="room" />
+    <input type="submit" value="Confirm">
+  </form>
+
   <script src="/tictactoe.js"></script>
 </body>
 
