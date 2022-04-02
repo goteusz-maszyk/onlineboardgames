@@ -10,7 +10,7 @@ const server = createServer(app);
 const io = new Server(server);
 
 const port = process.argv[2] ? process.argv[2].split(":")[1] : process.env.PORT || 5000
-const path = process.argv[2] ? process.argv[2].split(":")[0] : '127.0.0.1'
+const path = process.argv[2] ? process.argv[2].split(":")[0] : undefined
 
 let rooms = {}
 
