@@ -6,7 +6,9 @@ body {
     sans-serif;
   --margin: 5px;
   --td-vw: calc(33vw - (3 * var(--margin)));
-  --td-vh: calc(20vh - (3 * var(--margin)))
+  --td-vh: calc(20vh - (3 * var(--margin)));
+  color: #dddddd;
+  background: #431a1c;
 }
 
 a {
@@ -22,7 +24,7 @@ p {
 }
 
 .player-box {
-  border: solid #85fb61;
+  border: solid #ddb294;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -41,7 +43,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 80vh;
+  height: 79vh;
 }
 
 #player1, #player9 {
@@ -94,4 +96,9 @@ img {
 
 :root {
   --center-left-offset: 20vw
+}
+
+.modal-content {
+  color: #333333;
+  background: #f4f1e5;
 }
