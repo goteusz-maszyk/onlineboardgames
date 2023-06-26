@@ -1,4 +1,4 @@
-const socket = io({
+const socket = io(document.location.host + "/tictactoe", {
   query: {
     room: new URLSearchParams(document.location.search).get('room') || ""
   }

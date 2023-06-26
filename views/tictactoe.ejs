@@ -1,47 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="/style/tictactoe.css" />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="/style/tictactoe.css" />
-  <script src="/socket.io/socket.io.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<table>
+  <tbody>
+    <tr>
+      <td id="a1"></td>
+      <td id="b1" class="vert"></td>
+      <td id="c1"></td>
+    </tr>
+    <tr>
+      <td id="a2" class="hori"></td>
+      <td id="b2" class="hori vert"></td>
+      <td id="c2" class="hori"></td>
+    </tr>
+    <tr>
+      <td id="a3"></td>
+      <td id="b3" class="vert"></td>
+      <td id="c3"></td>
+    </tr>
+  </tbody>
+</table>
+<p>GAME STATUS: <span id="game-status">PENDING</span></p>
+<p><button id="reset-game-btn">RESET GAME</button></p>
+<p id="room">
+  ROOM:
+  <%= room %>
+</p>
 
-<body>
-  <table>
-    <tbody>
-      <tr>
-        <td id="a1"></td>
-        <td id="b1" class="vert"></td>
-        <td id="c1"></td>
-      </tr>
-      <tr>
-        <td id="a2" class="hori"></td>
-        <td id="b2" class="hori vert"></td>
-        <td id="c2" class="hori"></td>
-      </tr>
-      <tr>
-        <td id="a3"></td>
-        <td id="b3" class="vert"></td>
-        <td id="c3"></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>GAME STATUS: <span id="game-status">PENDING</span></p>
-  <p><button id="reset-game-btn">RESET GAME</button></p>
-  <p id="room">
-    ROOM:
-    <%= room %>
-  </p>
+<form action="./">
+  <input placeholder="Change room" name="room" />
+  <input type="submit" value="Confirm">
+</form>
 
-  <form action="./">
-    <input placeholder="Change room" name="room" />
-    <input type="submit" value="Confirm">
-  </form>
-
-  <script src="/tictactoe.js"></script>
-</body>
-
-</html>
+<script src="/tictactoe.js"></script>

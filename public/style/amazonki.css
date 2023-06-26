@@ -1,0 +1,97 @@
+body {
+  text-align: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --margin: 5px;
+  --td-vw: calc(33vw - (3 * var(--margin)));
+  --td-vh: calc(20vh - (3 * var(--margin)))
+}
+
+a {
+  color: #61dafb;
+}
+
+p {
+  font-size: large;
+}
+
+.template {
+  display: none !important;
+}
+
+.player-box {
+  border: solid #85fb61;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.player-box > span > img {
+  height: 4vw;
+}
+#modal-cards > img {
+  height: 6vw;
+}
+img {
+  margin: 5px;
+}
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
+}
+
+#player1, #player9 {
+  transform: rotate(-90deg);
+  align-self: flex-start;
+}
+#player1 {
+  order: 4;
+}
+#player1, #player2 {
+  top: 4vw
+}
+#player10, #player9 {
+  top: 45vh;
+}
+
+
+#player2, #player10 {
+  transform: rotate(90deg);
+  align-self: flex-end;
+}
+#player2 {
+  order: 5
+}
+
+#player3 {
+  order: 1;
+}
+#player5 {
+  order: 2;
+}
+#player4 {
+  order: 3;
+}
+
+#player3, #player4, #player5, #player6, #player7, #player8 {
+  align-self: center;
+}
+
+#player6, #player7, #player8 {
+  top: 60vh;
+  flex-direction: column-reverse;
+}
+#player6, #player3 {
+  left: var(--center-left-offset);
+}
+#player7, #player4 {
+  right: var(--center-left-offset);
+}
+
+:root {
+  --center-left-offset: 20vw
+}

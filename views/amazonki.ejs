@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/style/amazonki.css" />
+
+<h2>Amazonki</h2>
+<div id="before-start">
+  <p>Oczekiwanie na rozpoczęcie gry...</p>
+  <p>Twój nick: <span id="nick"></span></p>
+  <button class="btn btn-primary" onclick="changeNick()">Zmień nick</button>
+</div>
+<p id="role-info"></p>
+<div id="game-area">
+</div>
+
+<p><button id="reset-game-btn" class="btn btn-success">Rozpocznij grę</button></p>
+<p>Status gry: <span id="game-status">OCZEKIWANIE</span></p>
+<p id="room">
+  POKÓJ:
+  <%= room %>
+</p>
+
+<div class="modal fade" tabindex="-1" id="modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nowa runda!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-cards">
+        <p>Oto twoje karty:</p>
+        <div></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/amazonki.js"></script>
